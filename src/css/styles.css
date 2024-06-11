@@ -1,0 +1,117 @@
+body{
+  background-image: url('../images/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+}
+
+.primary{
+  background-color: #003C43;
+}
+.secondary{
+  background-color: #135D66;
+}
+
+.tricera{
+  background-color: #77B0AA;
+}
+
+.fontcolor1{
+  color: #003C43;
+}
+
+.fontcolor2{
+  color: #135D66;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hide_element{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 500ms;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.greet:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.greet:nth-child(3){
+  transition-delay: 400ms;
+}
+
+.greet:nth-child(4){
+  transition-delay: 600ms;
+}
+
+
+.btn{
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+
+}
+
+.btn::after{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #003C43;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btn::before{
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #003C43, #135D66, #77B0AA, #E3FEF7,
+    #401F71, #824D74, #BE7B72, #FDAF7B
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+
+}
+
+@keyframes glowing{
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+.btn:active::after{
+  background: transparent;
+}
+
+.btn:active{
+  color: #000;
+  font-weight: bold;
+}

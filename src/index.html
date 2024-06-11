@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--
+Navigation bar
+-->
+<nav class="primary h-full sticky top-0 z-50 ">
+    <div class="flex flex-wrap items-center justify-between mx-auto p-5">
+      <a href="javascript:location.reload()"  class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span class="rounded-full self-center text-3xl font-semibold whitespace-nowrap dark:text-white"><img class="rounded-full" src="./images/logo.png" alt="logo" height="50" width="50"></span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-200 dark:text-teal-400 dark:hover:bg-teal-800 dark:focus:ring-teal-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto text-xl" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 primary">
+          <li class="hover:scale-105 transform transition duration-y hover:underline ">
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-200  md:p-0 dark:text-white md:dark:hover:text-teal-200 dark:hover:bg-teal-800 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-y hover:underline ">
+            <a href="#about_section" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-200  md:p-0 dark:text-white md:dark:hover:text-teal-200 dark:hover:bg-teal-800 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-y hover:underline ">
+            <a href="#projects_section" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-200  md:p-0 dark:text-white md:dark:hover:text-teal-200 dark:hover:bg-teal-800 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-y hover:underline ">
+            <a href="#achievements_section" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-200  md:p-0 dark:text-white md:dark:hover:text-teal-200 dark:hover:bg-teal-800 dark:hover:text-white md:dark:hover:bg-transparent">Achievements</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-y hover:underline ">
+            <a href="#contacts_section" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-200  md:p-0 dark:text-white md:dark:hover:text-teal-200 dark:hover:bg-teal-800 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--
+End of Navigation bar
+-->
+
+
+<!--
+Home Section
+-->
+<div class="flex flex-col md:flex-row  m-5  md:m-3  ">
+  <div class="flex-initial w-full md:w-1/2 sm:m-0 md:m-3 lg:m-3  flex justify-center items-center lg:rounded-xl md:rounded-xl sm:rounded-t-lg">
+    <!-- Here is the basic introduction, social media platforms, and download resume button -->
+      <div class="text-2xl p-4 text-center">
+          <h2 class="greet hide_element text-lg 2xl:text-xl lg:text-lg md:text-lg sm:text-sm  mb-3 hover:scale-105 transform transition duration-y dark:text-black">Hello, I'm</h2>
+          <h2 class="auto-type greet hide_element text-xl 2xl:text-5xl lg:text-4xl md:text-xl sm:text-lg  font-bold mb-3 hover:scale-105 transform transition duration-y dark:text-black"></h2>
+          <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+          <script>
+            var typed = new Typed(".auto-type",{
+              strings : ['<span class="text-blue-900"><i class="fa fa-code" aria-hidden="true"></i> a Programmer <i class="fa fa-code" aria-hidden="true"></i></span>',
+              '<span class="text-rose-900"><i class="fa fa-user-secret" aria-hidden="true"></i> a QA Tester <i class="fa fa-user-secret" aria-hidden="true"></i></span>',
+              '<span class="text-teal-950">Kendrix Niccolo Ducusin</span>'],
+              typeSpeed: 50,
+              backSpeed: 50,
+              loop: false,
+              showCursor:false
+            });
+          </script>
+          <p class="greet hide_element text-lg 2xl:text-2xl lg:text-xl md:text-md sm:text-sm mb-3 hover:scale-105 transform transition duration-y dark:text-black">Passionate in both Software Development and Software Testing</p>
+          <!-- Facebook -->
+          <button
+              type="button"
+              id="fb_page"
+              data-twe-ripple-init
+              data-twe-ripple-color="light"
+              class="hover:scale-110 transform duration-y mb-2 inline-block rounded bg-[#1877f2] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+              <span class="[&>svg]:h-4 [&>svg]:w-4">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 320 512">
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                          d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                  </svg>
+              </span>
+          </button>
+          <!-- Linkedin -->
+          <button
+              type="button"
+              id="linkedin_page"
+              data-twe-ripple-init
+              data-twe-ripple-color="light"
+              class="hover:scale-110 transform duration-y mb-2 inline-block rounded bg-[#0077b5] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+              <span class="[&>svg]:h-4 [&>svg]:w-4">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 448 512">
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                          d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                  </svg>
+              </span>
+          </button>
+          <!-- Youtube -->
+          <button
+              type="button"
+              id="youtube_page"
+              data-twe-ripple-init
+              data-twe-ripple-color="light"
+              class="hover:scale-110 transform duration-y mb-2 inline-block rounded bg-[#ff0000] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+              <span class="[&>svg]:h-4 [&>svg]:w-4">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 576 512">
+                      <path
+                          d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                  </svg>
+              </span>
+          </button>
+          <a class="btn mt-5 block" href="./documents/Resume-DucusinKendrix.pdf" download> 
+            <i class="fa fa-download" aria-hidden="true"></i> Download Resume
+          </a>
+      </div>
+  </div>
+   <!-- Main Photo which is a .gif file for the simple movement animation -->
+  <div class="flex-initial w-full md:w-1/2 sm:m-0 md:m-3 lg:m-3 ">
+      <img  src="./images/mainphoto.gif" alt="logo" class="w-full h-auto lg:rounded-xl md:rounded-xl sm:rounded-b-lg">
+  </div>
+</div>
+<!--
+End of Home Section
+-->
+
+<!-- About Section -->
+<div id="about_section"></div>
+<div class="ml-16 2xl:mt-60 lg:mt-40 md:mt-32 sm:mt-10 hide_element" >
+<p class="text-xl lg:text-5xl md:text-2xl sm:text-xl font-bold fontcolor1" ><i class="fa fa-user-circle-o hover:text-emerald-600" aria-hidden="true"></i> A B O U T</p>
+<div class="w-3/4">
+  <p class="text-sm  lg:text-xl md:text-lg sm:text-sm mt-5 ">I am a Computer Engineering graduate with a keen interest in both Software Development and and Software Testing. With a foundation in various programming languages and a commitment to continuous learning, I strive to bring creativity and technical expertise to every project. </p>
+  <p class="text-lg lg:text-2xl md:text-lg sm:text-lg font-bold fontcolor1 mt-5">Technical Skills</p>
+  <ul class="ml-5 list-disc">
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Automation Tools:</span> Selenium IDE, Postman, UiPath, JMeter </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Manual Testing:</span> Test case design, Test Execution. Defect tracking  </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Issue Tracking/Project Management:</span> Jira, Trello, Sentry </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Web Design:</span> HTML. CSS. Tailwind. Bootstrap </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Programming Languages:</span> PHP, JavaScript, Java  </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Libraries:</span> jQuery, Socket.io  </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Database:</span> MySQL, Microsoft SQL </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Frameworks:</span> CodeIgniter, Express, Flutter  </li>
+    <li class="text-sm lg:text-lg md:text-md sm:text-sm "><span class="font-bold">Others:</span> Jenkins, Git, GitHub, Git Actions, Docker, Arduino, ESP8266, Figma, Canva, PC Assembly </li> 
+  </ul>
+</div>
+</div>
+
+<!-- projects section -->
+<div class="ml-5 2xl:mt-80 lg:mt-40 md:mt-32 sm:mt-10">
+  <p id="projects_section" class="proj hide_element pt-32 text-xl lg:text-5xl md:text-2xl sm:text-xl font-bold fontcolor1 text-center"><i class="fa fa-laptop hover:text-emerald-500" aria-hidden="true"></i> P R O J E C T S</p>
+  <div class="w-full flex justify-center mt-5">
+    <div class="2xl:text-xl xl:text-lg lg:text-md md:text-sm sm:text-sm 2xl:max-w-screen-xl xl:max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm sm:max-w-screen-sm grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 p-4 ">
+      
+      <!-- Latest Project - Village 88 Capstone -->
+      <div class="proj hide_element  max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-black hover:scale-105 transform transition duration-300">
+        <a href="#projects_section">
+            <img class="rounded-t-lg" src="./images/village88project.png" alt="capstoneproject" />
+        </a>
+        <div class="p-5">
+            <a href="#projects_section">
+                <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">Village 88 Capstone Project (Quality Assurance Track)</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Performed Manual Testing, Browser Automation using Selenium IDE, and Performance Testing using 
+              JMeter in 7 days. Created documentations such as Test Plan, Test Cases (Divided by modules), and Test Report. </p>
+            <a href="https://drive.google.com/drive/folders/1zxhJU3lu8MPQ9Wko8NS36pBlv9PlpP2-?usp=sharing" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700">
+                Documentations
+              <i class="fa fa-arrow-right ml-3" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://youtu.be/rplmGIvnvmM" target="_blank" class="mt-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700">
+             Short Video Demonstration
+             <i class="fa fa-arrow-right ml-3" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+    <!-- 2nd Project - Lorma Colleges OJT Project -->
+      <div class="proj hide_element  max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-black hover:scale-105 transform transition duration-300">
+        <a href="#projects_section">
+          <img class="rounded-t-lg" src="./images/ojtproject.png" alt="capstoneproject" />
+        </a>
+        <div class="p-5">
+            <a href="#projects_section">
+                <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">Motion Triggered Image Capture and Email (OJT Project) </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Programmed the Esp32-Cam using SMTP (Simple Mail Transfer Protocol) to send images to email. 
+              Utilized the Auto Connect library for Wi-Fi configurations and soldered all components, including 
+              resistors, transistors, wires, and sensors, for the project. Completed within a 5-month timeframe. </p>
+              <a href="https://drive.google.com/file/d/1czLMzZ-m2qEuUKB2phPoKv0j9nIZIIa-/view" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700">
+                Documentations
+                <i class="fa fa-arrow-right ml-3" aria-hidden="true"></i>
+            </a>
+   
+        </div>
+      </div>
+
+    <!-- 3rd Project - Lorma Colleges Thesis Project -->
+      <div class="proj hide_element max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-black hover:scale-105 transform transition duration-300">
+        <a href="#projects_section">
+          <img class="rounded-t-lg" src="./images/thesisproject.png" alt="capstoneproject" />
+        </a>
+        <div class="p-5">
+            <a href="#projects_section">
+                <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">ASLIGHT: American Sign Language in Gloves Handy Translator (Thesis Project)</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Developed an Android application in Java using Android Studio, configured and programmed Wi-Fi 
+              connections for Node MCU modules, and utilized Firebase as a Backend-as-a-Service (BaaS) all 
+              completed within a 6-month timeframe. </p>
+              <button disabled class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700">
+                Documentations
+                <i class="fa fa-arrow-right ml-3" aria-hidden="true"></i>
+              </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+End of Projects Section
+-->
+
+<!-- Achievements section -->
+<div class="w-12/12 ml-16 2xl:mt-40 lg:mt-40 md:mt-32 sm:mt-10">
+  <p id="achievements_section" class="pt-32 text-xl lg:text-5xl md:text-2xl sm:text-xl font-bold fontcolor1"><i class="fa fa-trophy hover:text-yellow-600" aria-hidden="true"></i> A C H I E V E M E N T S</p>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700 m-10  ">               
+
+    <!-- QA Certificate Title and Description -->
+    <li class="mb-10 ms-6 w-3/4">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-teal-900 tricera"></span>
+        <h3 class="first_award hide_element flex items-center mb-1 text-sm  lg:text-lg md:text-lg sm:text-lg  font-semibold text-gray-900 dark:text-black">Best in Quality Assurance Capstone <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-teal-900 dark:text-white ms-3">Latest</span></h3>
+        <time class="first_award hide_element block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Awarded on April 29th, 2024</time>
+        <p class="first_award hide_element mb-4 text-sm  lg:text-base md:text-md sm:text-sm font-normal text-gray-500 dark:text-gray-800">Awarded as one of the Best in Capstone in Quality Assurance and presented during the online 
+          graduation ceremony.</p>
+        <a id="open_qa_cert"  class="first_award hide_element inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700">
+          View Certificate</a>
+    </li>
+
+    <!-- QA Certificate Image View-->
+    <div id="qacert" class="fixed inset-0 bg-black bg-opacity-75 flex items-center hidden justify-center z-50">
+      <div class="relative">
+        <img id="image" src="./images/certificates/cert-of-recognition.png" alt="capstoneprojectimg" class="2xl:max-w-4xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm">
+        <button id="close_qa_cert" class="absolute top-0 right-0 m-2 text-white bg-gray-800 bg-opacity-50 hover:bg-opacity-75 rounded-full p-1">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- CSC Certificate Title and Description -->
+    <li class="mb-10 ms-6 w-3/4">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-teal-900 tricera"></span>
+        <h3 class="second_award hide_element flex mb-1 text-sm  lg:text-lg md:text-lg sm:text-lg  font-semibold text-gray-900 dark:text-black">Career Service Examination (Professional level)</h3>
+        <time class="second_award hide_element  block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on October 5th, 2022</time>
+        <p class="second_award hide_element mb-4 text-sm  lg:text-base md:text-md sm:text-sm font-normal text-gray-500 dark:text-gray-800 ">Took and passed the Civil Service Exam (Professional Level) 
+          held on August 7, 2022.</p>
+        <a id="open_csc_cert"  class="second_award hide_element inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700">
+          View Certificate
+        </a>
+    </li>
+
+    <!-- CSC Certificate Image View -->
+    <div id="csc_cert" class="fixed inset-0 bg-black bg-opacity-75 flex items-center hidden justify-center z-50">
+      <div class="relative">
+        <img id="image" src="./images/certificates/csc_eligibility.png" alt="cscimageimg" class="2xl:max-w-4xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm">
+        <button id="close_csc_cert" class="absolute top-0 right-0 m-2 text-white bg-gray-800 bg-opacity-50 hover:bg-opacity-75 rounded-full p-1">&times;</button>
+      </div>
+    </div>
+
+    <!-- Design Project Certificate Title and Description -->
+    <li class="mb-10 ms-6 w-3/4">
+      <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-teal-900 tricera"></span>
+      <h3 class="third_award hide_element mb-1 text-sm  lg:text-lg md:text-lg sm:text-lg  font-semibold text-gray-900 dark:text-black">Best in Computer Engineering Design Project 2021</h3>
+      <time class="third_award hide_element block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Awarded on July 23rd, 2021</time>
+      <p class="third_award hide_element mb-4 text-sm  lg:text-base md:text-md sm:text-sm font-normal text-gray-500 dark:text-gray-800">Honored as part of the thesis team awarded Best in Design Project. </p>
+      <a id="open_despro_cert" class="third_award hide_element inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700">
+      View Award</a>
+    </li>
+
+    <!-- Design Project Image View -->
+    <div id="despro_cert" class="fixed inset-0 bg-black bg-opacity-75 flex items-center hidden justify-center z-50">
+      <div class="relative">
+        <img id="image" src="./images/certificates/award-lorma.png" alt="desproimg" class="2xl:max-w-4xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm">
+        <button id="close_despro_cert" class="absolute top-0 right-0 m-2 text-white bg-gray-800 bg-opacity-50 hover:bg-opacity-75 rounded-full p-1">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- OJT Project Certificate Title and Description -->
+    <li class="mb-10 ms-6 w-3/4">
+      <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-teal-900 tricera"></span>
+      <h3 class="fourth_award hide_element mb-1 text-sm  lg:text-lg md:text-lg sm:text-lg  font-semibold text-gray-900 dark:text-black">Best in Computer Engineering On-The-Job Training 2021 </h3>
+      <time class="fourth_award hide_element block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Awarded on July 23rd, 2021</time>
+      <p class="fourth_award hide_element mb-4 text-sm  lg:text-base md:text-md sm:text-sm font-normal text-gray-500 dark:text-gray-800">Received the Best in On-The-Job Training award for my individual project presentation on "Motion 
+        Triggered Image Capture and Email." </p>
+      <a id="open_ojt_cert" class="fourth_award hide_element inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white border border-gray-200 rounded-lg hover:bg-gray-100  focus:text-white dark:bg-teal-800  dark:border-teal-600 dark:hover:text-white dark:hover:bg-teal-700 ">
+      View Award</a>
+    </li>
+    <!-- OJT Project Certificate Image View -->
+    <div id="ojt_cert" class="fixed inset-0 bg-black bg-opacity-75 flex items-center hidden justify-center z-50">
+      <div class="relative">
+        <img id="image" src="./images/certificates/award-lorma.png" alt="ojtimg" class="2xl:max-w-4xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm">
+        <button id="close_ojt_cert" class="absolute top-0 right-0 m-2 text-white bg-gray-800 bg-opacity-50 hover:bg-opacity-75 rounded-full p-1">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Deans Lister Award-->
+    <li class="ms-6 w-3/4">
+        <span class="fifth_award hide_element absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-teal-900 tricera">
+        </span>
+        <h3 class="fifth_award hide_element mb-1 text-sm  lg:text-lg md:text-lg sm:text-lg  font-semibold text-gray-900 dark:text-black">Dean’s Lister 2nd semester 2019 and 1st semester 2020 </h3>
+        <time class="fifth_award hide_element block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">N/A</time>
+        <p class="fifth_award hide_element text-sm  lg:text-base md:text-md sm:text-sm font-normal text-gray-500 dark:text-gray-800">Achieved Dean’s List recognition for two semesters.</p>
+    </li>
+  </ol>
+</div>
+<!--
+End of Achievements Section
+-->
+
+<!-- Contacts section -->
+<div id="contacts_section" class=" w-12/12 mt-40 bg-gray-300 p-5">
+  <p class="text-xl lg:text-5xl md:text-2xl sm:text-xl font-bold fontcolor1 text-center">C O N T A C T</p>
+  <p class="text-sm lg:text-lg md:text-md sm:text-sm  fontcolor1 text-center mt-2">Send me a Message!</p>
+  <p class="text-center text-sm lg:text-lg md:text-md sm:text-sm mt-5"><span class="fontcolor1 font-bold "><i class="fa fa-envelope" aria-hidden="true"></i> </span> kendrixducusin1497@gmail.com</p>
+  <p class="text-center text-sm lg:text-lg md:text-md sm:text-sm mt-5"><span class="fontcolor1 font-bold "><i class="fa fa-phone" aria-hidden="true"></i> </span> 09456000907</p>
+</div>
+<!--
+End of Contacts Section
+-->
+</body>
+
+<!-- Footer section -->
+<footer class="text-center primary text-white text-sm lg:text-lg md:text-md sm:text-sm">
+  <div>
+    KENDRIX NICCOLO DUCUSIN <i class="fa fa-copyright" aria-hidden="true"></i> 2024
+  </div>
+</footer>
+<!--
+End of Footer Section
+-->
+</html>
